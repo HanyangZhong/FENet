@@ -124,24 +124,67 @@ We will get the visualization result in `work_dirs/xxx/xxx/visualization`.
 
 ### CULane
 
-|   Model | Backbone  |  mF1 | F1@50  | F1@75 | GFlops |
-| :---     |  :---:   |  :---:   |   :---:    | :---:| :---:|
-| [LaneATT]   |[ResNet-122]   | 51.48  |  77.02   | 57.50 | 70.5 |
-| [CLRNet]   |[ResNet-18]   | 55.23  |  79.58   | 62.21 | 11.9 |
-| [CLRNet]    |[DLA-34]     | 55.64 | 80.47  | 62.78 | 18.5 |
-| [FENetV1]   |[DLA-34]    | 56.17 |  80.19   | 63.50 | 18.8 |
-| [FENetV2]   |[DLA-34]    | 56.17 |  80.19   | 63.50 | 18.8 |
+| **Method**    | **Backbone** | **mF1** | **F1@50** | **F1@75** | **GFlops** |
+|:-------------:|:------------:|:-------:|:---------:|:---------:|:-----------:|
+| UFLDV2        | ResNet18     | -       | 75        | -         | -           |
+| UFLDV2        | ResNet34     | -       | 76        | -         | -           |
+| FOLOLane      | ERFNet       | -       | 78.8      | -         | -           |
+| LaneAF        | ERFNet       | 48.6    | 75.63     | 54.53     | 22.2        |
+| LaneAF        | DLA34        | 50.42   | 77.41     | 56.79     | 23.6        |
+| LaneATT       | ResNet18     | 47.35   | 75.13     | 51.29     | 9.3         |
+| LaneATT       | ResNet34     | 49.57   | 76.68     | 54.34     | 18          |
+| LaneATT       | ResNet122    | 51.48   | 77.02     | 57.5      | 70.5        |
+| GANet-S       | ResNet18     | -       | 78.79     | -         | -           |
+| GANet-M       | ResNet34     | -       | 79.39     | -         | -           |
+| GANet-L       | ResNet101    | -       | 79.63     | -         | -           |
+| CLRnet        | ResNet18     | 55.23   | 79.58     | 62.21     | 11.9        |
+| CLRnet        | ResNet34     | 55.14   | 79.73     | 62.11     | 21.5        |
+| CLRnet        | ResNet101    | 55.55   | 80.13     | 62.96     | 42.9        |
+| CLRnet        | DLA34        | 55.64   | **80.47**     | 62.78     | 18.5        |
+| FENetV1(ours) | DLA34        | **56.27**   | 80.15     | **63.66**     | 19.05       |
+| FENetV2(ours) | DLA34        | 56.17   | 80.19     | 63.50     | 18.85       
+|
 
 ### LLAMAS
 |   Model |   Backbone    |  <center>  valid <br><center> &nbsp; mF1 &nbsp; &nbsp;  &nbsp;F1@50 &nbsp; F1@75      |
 |  :---:  |    :---:    |        :---:|
-| [CLRNet] | [DLA-34]  |  <center> 71.57 &nbsp; &nbsp;  97.06  &nbsp; &nbsp; 85.43 | 
-| [FENetV2] | [DLA-34]   |  <center> 71.85 &nbsp; &nbsp;  96.97  &nbsp; &nbsp; 85.63  |   
+| CLRNet | DLA-34  |  <center> 71.57 &nbsp; &nbsp;  **97.06**  &nbsp; &nbsp; 85.43 | 
+| FENetV2(ours) | DLA-34   |  <center> **71.85** &nbsp; &nbsp;  96.97  &nbsp; &nbsp; **85.63**  |   
+|
 
 “F1@50” refers to the official metric, i.e., F1 score when IoU threshold is 0.5 between the gt and prediction. "F1@75" is the F1 score when IoU threshold is 0.75.
 
+### Partial Field of View Evaluation on CULane
+<div>
+<img src="img/Figure_half.png" width="400px">
+</div>
+
+| **Field of View**    | **Backbone** | **mF1** | **Normal** | **Crowded** | **Dazzle** | **Shadow** | **No line** | **Arrow** | **Curve** | **Cross** |  **Night** |
+|:--------------------:|:------------:|:-------:|:----------:|:-----------:|:----------:|:----------:|:-----------:|:---------:|:---------:|:---------:|:----------:|
+| **Whole**                  |            
+|             |           |           |           |            |
+| CLRNet               | DLA34        | 55.64   | 68.72      | 53.81       | 47.4       | 53.24      | 35.28       | 65.56     | 40.62     | 1154      | 49.59      |
+| FENetV1              | DLA34        | **56.27**   | 68.7       | **55.12**       | **48.16**      | 52.77      | **35.32**       | 65.57     | 42.11     | **1147**      | 50.51      |
+| FENetV2              | DLA34        | 56.17   | **69.19**      | 54.38       | 47.67      | **53.39**      | 35.15       | **66.03**     | **43.29**     | 1206      | **50.55**      |
+| **Top 1/2**    |                
+|            |             |           |           |           |            |
+| CLRNet               | DLA34        | 60.17   | 73.83      | 57.55       | 53.24      | 57.69      | **38.8**        | 69.81     | 38.88     | 1155      | 55.3       |
+| FENetV1              | DLA34        | **61.08**   | 74.11      | **59.09**       | **53.92**      | 58.46      | 38.48       | 69.98     | 41.92     | **1147**      | 56.69      |
+| FENetV2              | DLA34        | 60.97   | **74.59**      | 58.21       | 53.75      | **58.5**       | 38.59       | **70.33**     | **44.54**     | 1206      | **56.73**      |
+| **Top 1/3** |
+||||||   
+| CLRNet               | DLA34        | 58.53   | 72.46      | 55.84       | 52.84      | 53.89      | 38.48       | 67.76     | 31.1      | 1155      | 53.13      |
+| FENetV1              | DLA34        | **59.71**   | 73.06      | **57.45**       | 53.86      | **55.29**      | 38.28       | 67.99     | 34.61     | **1147**      | 55.04      |
+| FENetV2              | DLA34        | 59.53   | **73.5**       | 56.43       | **54.03**      | 54.53      | **38.49**       | **68.07**     | **37.11**     | 1206      | **55.05**      |
+|
+
+All the scene metrics are tested in mF1. The Partial Field of View Evaluation about Top 1/2 and Top 1/3 is shown in (a) and (b).
+
+
 ## Result comparation
-![Arch](img/Figure6.png)
+<div align="center">
+<img src="img/Figure6.png" >
+</div>
 
 ## Citation
 ```
