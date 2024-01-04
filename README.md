@@ -196,7 +196,7 @@ All the scene metrics are tested in mF1. The Partial Field of View Evaluation ab
 
 ## Citation
 ```
-@misc{wang&zhong_2024fenet,
+@article{wang&zhong_2024fenet,
       title={FENet: Focusing Enhanced Network for Lane Detection}, 
       author={Liman Wang and Hanyang Zhong},
       year={2024},
