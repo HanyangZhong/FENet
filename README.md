@@ -10,7 +10,7 @@ The paper is available at [arXiv](https://arxiv.org/abs/2312.17163).
 </div>
 
 
-This research contributes four innovations: 
+This research contributes four main innovations: 
 
 1. **Focusing Sampling:** a training strategy prioritizing small and distant lane details
 2. **Partial Field of View Evaluation:** new metrics for accuracy in forward road sections critical for real-world applications
