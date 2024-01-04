@@ -164,15 +164,15 @@ We will get the visualization result in `work_dirs/xxx/xxx/visualization`.
 | CLRnet        | ResNet34     | 55.14   | 79.73     | 62.11     | 21.5        |
 | CLRnet        | ResNet101    | 55.55   | 80.13     | 62.96     | 42.9        |
 | CLRnet        | DLA34        | 55.64   | **80.47**     | 62.78     | 18.5        |
-| [FENetV1(ours)](https://github.com/HanyangZhong/FENet/releases/tag/v1/fenetv1_culane_dla34.zip) | DLA34        | **56.27**   | 80.15     | **63.66**     | 19.05       |
-| [FENetV2(ours)](https://github.com/HanyangZhong/FENet/releases/tag/v1/fenetv2_culane_dla34.zip) | DLA34        | 56.17   | 80.19     | 63.50     | 18.85       
+| [FENetV1(ours)](https://github.com/HanyangZhong/FENet/releases/tag/v1) | DLA34        | **56.27**   | 80.15     | **63.66**     | 19.05       |
+| [FENetV2(ours)](https://github.com/HanyangZhong/FENet/releases/tag/v1) | DLA34        | 56.17   | 80.19     | 63.50     | 18.85       
 
 
 ### LLAMAS
 |   Model |   Backbone    |  <center>  valid <br><center> &nbsp; mF1 &nbsp; &nbsp;  &nbsp;F1@50 &nbsp; F1@75      |
 |  :---:  |    :---:    |        :---:|
 | CLRNet | DLA-34  |  <center> 71.57 &nbsp; &nbsp;  **97.06**  &nbsp; &nbsp; 85.43 | 
-| [FENetV2(ours)](https://github.com/HanyangZhong/FENet/releases/tag/v1/fenetv2_llamas_dla34.zip) | DLA-34   |  <center> **71.85** &nbsp; &nbsp;  96.97  &nbsp; &nbsp; **85.63**  |   
+| [FENetV2(ours)](https://github.com/HanyangZhong/FENet/releases/tag/v1) | DLA-34   |  <center> **71.85** &nbsp; &nbsp;  96.97  &nbsp; &nbsp; **85.63**  |   
 
 
 
