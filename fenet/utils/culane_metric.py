@@ -40,12 +40,13 @@ import cv2  # Ensure OpenCV is imported
 
 def discrete_cross_iou_new(xs, ys, width=30, img_shape=(590, 1640, 3), far_weight=0.6, near_weight=0.4,partial_view=1):
     # Calculate the cut-off point for 'far' and 'near' (3/4 of the image height)
+    # print(partial_view)
     if partial_view == 1:
         # 1/2 partial view
-        cut_off = img_shape[0] * 2 // 3
+        cut_off = img_shape[0] * 3 // 4
     elif partial_view == 2:
         # 1/3 partial view
-        cut_off = img_shape[0] * 3 // 4
+        cut_off = img_shape[0] * 2 // 3
     elif partial_view == 3:
         # 1/4 partial view
         cut_off = img_shape[0] * 5 // 8
