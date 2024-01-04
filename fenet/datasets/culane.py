@@ -133,17 +133,21 @@ class CULane(BaseDataset):
         # Round the thresholds to two decimal places
         rounded_thresholds = np.round(thresholds, 2)
 
+        import logging
+        logger = logging.getLogger(__name__)
+        
+
         partial_view_list=[0,1,2]
         for item in partial_view_list:
 
             if item == 0:
-                self.recorder.logger.info('Now is the whole view metric')
+                logger.info('Now is the whole view metric')
             elif item == 1:
-                self.recorder.logger.info('Now is the 1/2 partial view metric')
+                logger.info('Now is the 1/2 partial view metric')
             elif item == 2:
-                self.recorder.logger.info('Now is the 1/3 partial view metric')
+                logger.info('Now is the 1/3 partial view metric')
             elif item == 3:
-                self.recorder.logger.info('Now is the 1/4 partial view metric')
+                logger.info('Now is the 1/4 partial view metric')
 
             for cate, cate_file in CATEGORYS.items():
                 # mf1 scene

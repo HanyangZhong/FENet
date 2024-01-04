@@ -44,11 +44,11 @@ class FEHeadV1(nn.Module):
         self.refine_layers = refine_layers
         self.fc_hidden_dim = fc_hidden_dim
 
-        a = torch.logspace(start=0, end=1, steps=60,base = 72).long()
-        a = torch.unique(a)
-        a = 72 - a 
+        fe_points = torch.logspace(start=0, end=1, steps=60,base = 72).long()
+        fe_points = torch.unique(fe_points)
+        fe_points = 72 - fe_points 
 
-        self.register_buffer(name='sample_x_indexs', tensor=a)
+        self.register_buffer(name='sample_x_indexs', tensor=fe_points)
         
         self.register_buffer(name='prior_feat_ys', tensor=torch.flip((1 - self.sample_x_indexs.float() / self.n_strips), dims=[-1]))
         self.register_buffer(name='prior_ys', tensor=torch.linspace(1,

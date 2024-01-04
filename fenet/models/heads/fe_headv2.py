@@ -46,13 +46,13 @@ class FEHeadV2(nn.Module):
         self.fc_hidden_dim = fc_hidden_dim
 
         # generate 60 points and exclude the repeated points, remained as 36 points
-        gic_points = torch.logspace(start=0, end=1, steps=60,base = 72).long()
-        gic_points = torch.unique(gic_points)
+        fe_points = torch.logspace(start=0, end=1, steps=60,base = 72).long()
+        fe_points = torch.unique(fe_points)
         # filps
-        points = 72 - points 
+        fe_points = 72 - fe_points 
 
         # setting up the GIC sampling points
-        self.register_buffer(name='sample_x_indexs', tensor=gic_points)
+        self.register_buffer(name='sample_x_indexs', tensor=fe_points)
         
         self.register_buffer(name='prior_feat_ys', tensor=torch.flip((1 - self.sample_x_indexs.float() / self.n_strips), dims=[-1]))
         self.register_buffer(name='prior_ys', tensor=torch.linspace(1,

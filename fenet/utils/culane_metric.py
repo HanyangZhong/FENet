@@ -242,7 +242,8 @@ def eval_predictions(pred_dir,
                         repeat(width),
                         repeat(iou_thresholds),
                         repeat(official),
-                        repeat(img_shape)),partial_view_num=partial_view_num)
+                        repeat(img_shape),
+                        repeat(partial_view_num)))
 
     mean_f1, mean_prec, mean_recall, total_tp, total_fp, total_fn = 0, 0, 0, 0, 0, 0
     ret = {}

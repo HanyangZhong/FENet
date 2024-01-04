@@ -74,6 +74,8 @@ conda install pytorch torchvision cudatoolkit=11.3 -c pytorch
 # Or you can install via pip
 pip install torch==1.11.0 torchvision==0.12.0
 
+pip install -r requirement.txt
+
 # Install python packages
 python setup.py build develop
 ```
