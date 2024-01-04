@@ -14,7 +14,7 @@ This research contributes four innovations:
 
 1. **Focusing Sampling:** a training strategy prioritizing small and distant lane details
 2. **Partial Field of View Evaluation:** new metrics for accuracy in forward road sections critical for real-world applications
-3. **An enhanced FPN architecture:** that incorporates either positional non-local blocks or standard non-local blocks, depending on the requirement (PEFPN & FEFPN)
+3. **Enhanced FPN architecture:** that incorporates either positional non-local blocks or standard non-local blocks, depending on the requirement (PEFPN & FEFPN)
 4. **Directional IoU Loss:** a novel regression loss that addresses directional discrepancies in distant lanes
 
 
