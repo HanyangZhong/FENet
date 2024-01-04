@@ -5,20 +5,22 @@ Pytorch implementation of the paper "FENet: Focusing Enhanced Network for Lane D
 The paper is available at [arXiv](https://arxiv.org/abs/2312.17163).
 
 ## Introduction
-![Arch](img/Figure3.png)
+<div align="center">
+<img src="img/Figure1.png" width="750px"> <img src="img/Figure3.png" width="800px">
+</div>
 
 
-This research contributes four innovations: 
+This research contributes four main innovations: 
 
-1. Focusing Sampling: a training strategy prioritizing small and distant lane details
-2. Partial Field of View Evaluation: new metrics for accuracy in forward road sections critical for real-world applications
-3. An enhanced FPN architecture that incorporates either positional non-local blocks or standard non-local blocks, depending on the requirement (PEFPN & FEFPN)
-4. Directional IoU Loss: a novel regression loss that addresses directional discrepancies in distant lanes
+1. **Focusing Sampling:** a training strategy prioritizing small and distant lane details
+2. **Partial Field of View Evaluation:** new metrics for accuracy in forward road sections critical for real-world applications
+3. **Enhanced FPN architecture:** that incorporates either positional non-local blocks or standard non-local blocks, depending on the requirement (PEFPN & FEFPN)
+4. **Directional IoU Loss:** a novel regression loss that addresses directional discrepancies in distant lanes
 
 
-FENetV1, employing positional non-local blocks, achieves state-of-the-art results on conventional metrics by concentrating on perspective-dependent semantics. 
+**FENetV1**, employing positional non-local blocks, achieves state-of-the-art results on conventional metrics by concentrating on perspective-dependent semantics. 
 
-FENetV2, which integrates coordinate modelling into the 'Directional IoU Loss', excels in boundary localization accuracy for distant lanes.
+**FENetV2**, which integrates coordinate modelling into the 'Directional IoU Loss', excels in boundary localization accuracy for distant lanes.
 
 ## Installation
 
@@ -188,7 +190,7 @@ All the scene metrics are tested in mF1. The Partial Field of View Evaluation ab
 
 ## Citation
 ```
-@misc{wang2024fenet,
+@misc{wang&zhong_2024fenet,
       title={FENet: Focusing Enhanced Network for Lane Detection}, 
       author={Liman Wang and Hanyang Zhong},
       year={2024},
