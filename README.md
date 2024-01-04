@@ -171,8 +171,8 @@ We will get the visualization result in `work_dirs/xxx/xxx/visualization`.
 ### LLAMAS
 |   Model |   Backbone    |  <center>  valid <br><center> &nbsp; mF1 &nbsp; &nbsp;  &nbsp;F1@50 &nbsp; F1@75      |
 |  :---:  |    :---:    |        :---:|
-| CLRNet | DLA-34  |  <center> 71.57 &nbsp; &nbsp;  **97.06**  &nbsp; &nbsp; 85.43 | 
-| [FENetV2(ours)](https://github.com/HanyangZhong/FENet/releases/tag/v1) | DLA-34   |  <center> **71.85** &nbsp; &nbsp;  96.97  &nbsp; &nbsp; **85.63**  |   
+| CLRNet | DLA34  |  <center> 71.57 &nbsp; &nbsp;  **97.06**  &nbsp; &nbsp; 85.43 | 
+| [FENetV2(ours)](https://github.com/HanyangZhong/FENet/releases/tag/v1) | DLA34   |  <center> **71.85** &nbsp; &nbsp;  96.97  &nbsp; &nbsp; **85.63**  |   
 
 
 
