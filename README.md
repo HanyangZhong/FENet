@@ -85,7 +85,7 @@ python setup.py build develop
 Download [CULane](https://xingangpan.github.io/projects/CULane.html). Then extract them to `$CULANEROOT`. Create link to `data` directory.
 
 ```Shell
-cd FENET_ROOT
+cd $FENET_ROOT
 mkdir -p data
 ln -s $CULANEROOT data/CULane
 ```
