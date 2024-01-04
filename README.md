@@ -5,7 +5,9 @@ Pytorch implementation of the paper "FENet: Focusing Enhanced Network for Lane D
 The paper is available at [arXiv](https://arxiv.org/abs/2312.17163).
 
 ## Introduction
-![Arch](img/Figure1.png)
+<div align="center">
+<img src="img/Figure1.png" width="400px">
+</div>
 ![Arch](img/Figure3.png)
 
 
