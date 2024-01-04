@@ -8,20 +8,19 @@ The paper is available at [arXiv](https://arxiv.org/abs/2312.17163).
 <div align="center">
 <img src="img/Figure1.png" width="400px"> <img src="img/Figure3.png" width="500px">
 </div>
-![Arch](img/Figure3.png)
 
 
 This research contributes four innovations: 
 
-1. \textbf{Focusing Sampling:} a training strategy prioritizing small and distant lane details
-2. \textbf{Partial Field of View Evaluation:} new metrics for accuracy in forward road sections critical for real-world applications
-3. \textbf{An enhanced FPN architecture:} that incorporates either positional non-local blocks or standard non-local blocks, depending on the requirement (PEFPN & FEFPN)
-4. \textbf{Directional IoU Loss:} a novel regression loss that addresses directional discrepancies in distant lanes
+1. **Focusing Sampling:** a training strategy prioritizing small and distant lane details
+2. **Partial Field of View Evaluation:** new metrics for accuracy in forward road sections critical for real-world applications
+3. **An enhanced FPN architecture:** that incorporates either positional non-local blocks or standard non-local blocks, depending on the requirement (PEFPN & FEFPN)
+4. **Directional IoU Loss:** a novel regression loss that addresses directional discrepancies in distant lanes
 
 
-FENetV1, employing positional non-local blocks, achieves state-of-the-art results on conventional metrics by concentrating on perspective-dependent semantics. 
+**FENetV1**, employing positional non-local blocks, achieves state-of-the-art results on conventional metrics by concentrating on perspective-dependent semantics. 
 
-FENetV2, which integrates coordinate modelling into the 'Directional IoU Loss', excels in boundary localization accuracy for distant lanes.
+**FENetV2**, which integrates coordinate modelling into the 'Directional IoU Loss', excels in boundary localization accuracy for distant lanes.
 
 ## Installation
 
