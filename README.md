@@ -5,7 +5,7 @@ Pytorch implementation of the paper "FENet: Focusing Enhanced Network for Lane D
 The paper is available at [arXiv](https://arxiv.org/abs/2312.17163).
 
 ## Introduction
-![Arch](img/figure3.png)
+![Arch](img/Figure3.png)
 
 
 This research contributes four innovations: 
@@ -141,7 +141,7 @@ We will get the visualization result in `work_dirs/xxx/xxx/visualization`.
 “F1@50” refers to the official metric, i.e., F1 score when IoU threshold is 0.5 between the gt and prediction. "F1@75" is the F1 score when IoU threshold is 0.75.
 
 ## Result comparation
-![Arch](img/figure6.png)
+![Arch](img/Figure6.png)
 
 ## Citation
 ```
