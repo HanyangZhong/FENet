@@ -149,21 +149,6 @@ We will get the visualization result in `work_dirs/xxx/xxx/visualization`.
 
 | **Method**    | **Backbone** | **mF1** | **F1@50** | **F1@75** | **GFlops** |
 |:-------------:|:------------:|:-------:|:---------:|:---------:|:-----------:|
-| UFLDV2        | ResNet18     | -       | 75        | -         | -           |
-| UFLDV2        | ResNet34     | -       | 76        | -         | -           |
-| FOLOLane      | ERFNet       | -       | 78.8      | -         | -           |
-| LaneAF        | ERFNet       | 48.6    | 75.63     | 54.53     | 22.2        |
-| LaneAF        | DLA34        | 50.42   | 77.41     | 56.79     | 23.6        |
-| LaneATT       | ResNet18     | 47.35   | 75.13     | 51.29     | 9.3         |
-| LaneATT       | ResNet34     | 49.57   | 76.68     | 54.34     | 18          |
-| LaneATT       | ResNet122    | 51.48   | 77.02     | 57.5      | 70.5        |
-| GANet-S       | ResNet18     | -       | 78.79     | -         | -           |
-| GANet-M       | ResNet34     | -       | 79.39     | -         | -           |
-| GANet-L       | ResNet101    | -       | 79.63     | -         | -           |
-| CLRnet        | ResNet18     | 55.23   | 79.58     | 62.21     | 11.9        |
-| CLRnet        | ResNet34     | 55.14   | 79.73     | 62.11     | 21.5        |
-| CLRnet        | ResNet101    | 55.55   | 80.13     | 62.96     | 42.9        |
-| CLRnet        | DLA34        | 55.64   | **80.47**     | 62.78     | 18.5        |
 | [FENetV1(ours)](https://github.com/HanyangZhong/FENet/releases/tag/v1) | DLA34        | **56.27**   | 80.15     | **63.66**     | 19.05       |
 | [FENetV2(ours)](https://github.com/HanyangZhong/FENet/releases/tag/v1) | DLA34        | 56.17   | 80.19     | 63.50     | 18.85       
 
@@ -171,7 +156,6 @@ We will get the visualization result in `work_dirs/xxx/xxx/visualization`.
 ### LLAMAS
 |   Model |   Backbone    |  <center>  valid <br><center> &nbsp; mF1 &nbsp; &nbsp;  &nbsp;F1@50 &nbsp; F1@75      |
 |  :---:  |    :---:    |        :---:|
-| CLRNet | DLA34  |  <center> 71.57 &nbsp; &nbsp;  **97.06**  &nbsp; &nbsp; 85.43 | 
 | [FENetV2(ours)](https://github.com/HanyangZhong/FENet/releases/tag/v1) | DLA34   |  <center> **71.85** &nbsp; &nbsp;  96.97  &nbsp; &nbsp; **85.63**  |   
 
 
