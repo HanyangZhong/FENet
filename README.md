@@ -85,7 +85,7 @@ python setup.py build develop
 Download [CULane](https://xingangpan.github.io/projects/CULane.html). Then extract them to `$CULANEROOT`. Create link to `data` directory.
 
 ```Shell
-cd CENET_ROOT
+cd FENET_ROOT
 mkdir -p data
 ln -s $CULANEROOT data/CULane
 ```
@@ -101,7 +101,7 @@ $CULANEROOT/list                 # data lists
 Dowload [LLAMAS](https://unsupervised-llamas.com/llamas/). Then extract them to `$LLAMASROOT`. Create link to `data` directory.
 
 ```Shell
-cd $CLRNET_ROOT
+cd $FENET_ROOT
 mkdir -p data
 ln -s $LLAMASROOT data/llamas
 ```
