@@ -167,7 +167,7 @@ We will get the visualization result in `work_dirs/xxx/xxx/visualization`.
 <img src="img/Figure_half.png" width="400px">
 </div>
 
-| **Field of View**    | **Backbone** | **mF1** | **Normal** | **Crowded** | **Dazzle** | **Shadow** | **No line** | **Arrow** | **Curve** | **Cross** |  **Night** |
+| **Field of View**    | **Backbone** | **mF1** | **Normal** | **Crowded** | **Dazzle** | **Shadow** | **No line** | **Arrow** | **Curve*** | **Cross** |  **Night** |
 |:--------------------:|:------------:|:-------:|:----------:|:-----------:|:----------:|:----------:|:-----------:|:---------:|:---------:|:---------:|:----------:|
 |||||
 | **Whole**                  |            
