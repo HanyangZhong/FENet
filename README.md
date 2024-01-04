@@ -1,26 +1,24 @@
-<div align="center">
-  
+# FENet: Focusing Enhanced Network for Lane Detection
 
-</div>
+Pytorch implementation of the paper "FENet: Focusing Enhanced Network for Lane Detection" 
 
-
-<div align="center">
-
-# FENet: Context Enhancement Network for Lane Detection with Lane Direction Informed-IoU
-
-</div>
-
-
-
-Pytorch implementation of the paper "[FENet: Context Enhancement Network for Lane Detection with Lane Direction Informed-IoU](https://arxiv.org/abs/2203.10350)" (Not yet Accepted).
+The paper is available at [arXiv](https://arxiv.org/abs/2312.17163).
 
 ## Introduction
-![Arch](.github/main.png)
-![Arch](.github/figure2.png)
-- FENet propose a new network structure (FENet) based on the significance of global semantic information in lane detection to adequately exploit and compensate for the lack of global information in the FPN network and strengthen the contextual information in high-level and low-level features.
-- FENet introduce a strategy anchored in the Gaze-inspired Concentrated Sample paradigm that emphasizes attention to the image’s distal components through a limited set of sampling points
-- FENet propose the Lane Direction Informed IoU (LDI-IoU) Loss, explicitly designed for the iterative prediction of lanes.
-- FENet achieves mF1 SOTA result on CULane, and LLAMAS datasets.
+![Arch](img/figure3.png)
+
+
+This research contributes four innovations: 
+
+1. Focusing Sampling: a training strategy prioritizing small and distant lane details
+2. Partial Field of View Evaluation: new metrics for accuracy in forward road sections critical for real-world applications
+3. An enhanced FPN architecture that incorporates either positional non-local blocks or standard non-local blocks, depending on the requirement (PEFPN & FEFPN)
+4. Directional IoU Loss: a novel regression loss that addresses directional discrepancies in distant lanes
+
+
+FENetV1, employing positional non-local blocks, achieves state-of-the-art results on conventional metrics by concentrating on perspective-dependent semantics. 
+
+FENetV2, which integrates coordinate modelling into the 'Directional IoU Loss', excels in boundary localization accuracy for distant lanes.
 
 ## Installation
 
@@ -35,7 +33,7 @@ Only test on Ubuntu18.04 and 20.04 with:
 Clone this code to your workspace. 
 We call this directory as `FENET_ROOT`
 ```Shell
-git clone ...
+git clone https://github.com/HanyangZhong/FENet.git
 ```
 
 ### Create a conda virtual environment and activate it (conda is optional)
@@ -102,7 +100,7 @@ python main.py [configs/path_to_your_config] --gpus [gpu_num]
 
 For example, run
 ```Shell
-python main.py configs/fenet/CE_dla34_culane.py --gpus 0
+python main.py configs/fenet/FENetV1_dla34_culane.py --gpus 0
 ```
 
 ### Validation
@@ -113,7 +111,7 @@ python main.py [configs/path_to_your_config] --[test|validate] --load_from [path
 
 For example, run
 ```Shell
-python main.py configs/fenet/CE_dla34_culane.py --validate --load_from ./checkpoint/fenet_culane_dla34.pth --gpus 0
+python main.py configs/fenet/FENetV2_dla34_culane.py --validate --load_from ./checkpoint/fenetv2_culane_dla34.pth --gpus 0
 ```
 
 Currently, this code can output the visualization result when testing, just add `--view`.
@@ -131,21 +129,29 @@ We will get the visualization result in `work_dirs/xxx/xxx/visualization`.
 | [LaneATT]   |[ResNet-122]   | 51.48  |  77.02   | 57.50 | 70.5 |
 | [CLRNet]   |[ResNet-18]   | 55.23  |  79.58   | 62.21 | 11.9 |
 | [CLRNet]    |[DLA-34]     | 55.64 | 80.47  | 62.78 | 18.5 |
-| [FENet]   |[DLA-34]    | 56.17 |  80.19   | 63.50 | 18.8 |
-
+| [FENetV1]   |[DLA-34]    | 56.17 |  80.19   | 63.50 | 18.8 |
+| [FENetV2]   |[DLA-34]    | 56.17 |  80.19   | 63.50 | 18.8 |
 
 ### LLAMAS
 |   Model |   Backbone    |  <center>  valid <br><center> &nbsp; mF1 &nbsp; &nbsp;  &nbsp;F1@50 &nbsp; F1@75      |
 |  :---:  |    :---:    |        :---:|
 | [CLRNet] | [DLA-34]  |  <center> 71.57 &nbsp; &nbsp;  97.06  &nbsp; &nbsp; 85.43 | 
-| [FENet] | [DLA-34]   |  <center> 71.85 &nbsp; &nbsp;  96.97  &nbsp; &nbsp; 85.63  |   
+| [FENetV2] | [DLA-34]   |  <center> 71.85 &nbsp; &nbsp;  96.97  &nbsp; &nbsp; 85.63  |   
 
 “F1@50” refers to the official metric, i.e., F1 score when IoU threshold is 0.5 between the gt and prediction. "F1@75" is the F1 score when IoU threshold is 0.75.
 
+## Result comparation
+![Arch](img/figure6.png)
+
 ## Citation
 ```
-@InProceedings{
-    
+@misc{wang2024fenet,
+      title={FENet: Focusing Enhanced Network for Lane Detection}, 
+      author={Liman Wang and Hanyang Zhong},
+      year={2024},
+      eprint={2312.17163},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 ```
 
@@ -154,5 +160,4 @@ We will get the visualization result in `work_dirs/xxx/xxx/visualization`.
 * [open-mmlab/mmdetection](https://github.com/open-mmlab/mmdetection)
 * [pytorch/vision](https://github.com/pytorch/vision)
 * [Turoad/CLRNet](https://github.com/Turoad/CLRNet)
-* [lucastabelini/LaneATT](https://github.com/lucastabelini/LaneATT)
 <!--te-->
