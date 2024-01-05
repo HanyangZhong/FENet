@@ -151,14 +151,14 @@ We will get the visualization result in `work_dirs/xxx/xxx/visualization`.
 
 | **Method**    | **Backbone** | **mF1** | **F1@50** | **F1@75** | **GFlops** |
 |:-------------:|:------------:|:-------:|:---------:|:---------:|:-----------:|
-| [FENetV1](https://github.com/HanyangZhong/FENet/releases/tag/v1) | DLA34        | 56.27   | 80.15     | 63.66     | 19.05       |
-| [FENetV2](https://github.com/HanyangZhong/FENet/releases/tag/v1) | DLA34        | 56.17   | 80.19     | 63.50     | 18.85       
+| [FENetV1](https://github.com/HanyangZhong/FENet/releases/tag/v1.0) | DLA34        | 56.27   | 80.15     | 63.66     | 19.05       |
+| [FENetV2](https://github.com/HanyangZhong/FENet/releases/tag/v1.0) | DLA34        | 56.17   | 80.19     | 63.50     | 18.85       
 
 
 ### LLAMAS
 |   Model |   Backbone    |  <center>  valid <br><center> &nbsp; mF1 &nbsp; &nbsp;  &nbsp;F1@50 &nbsp; F1@75      |
 |  :---:  |    :---:    |        :---:|
-| [FENetV2](https://github.com/HanyangZhong/FENet/releases/tag/v1) | DLA34   |  <center> 71.85 &nbsp; &nbsp;  96.97  &nbsp; &nbsp; 85.63  |   
+| [FENetV2](https://github.com/HanyangZhong/FENet/releases/tag/v1.0) | DLA34   |  <center> 71.85 &nbsp; &nbsp;  96.97  &nbsp; &nbsp; 85.63  |   
 
 
 
