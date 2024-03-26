@@ -1,3 +1,6 @@
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/fenet-focusing-enhanced-network-for-lane/lane-detection-on-llamas)](https://paperswithcode.com/sota/lane-detection-on-llamas?p=fenet-focusing-enhanced-network-for-lane)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/fenet-focusing-enhanced-network-for-lane/lane-detection-on-culane)](https://paperswithcode.com/sota/lane-detection-on-culane?p=fenet-focusing-enhanced-network-for-lane)
+
 # FENet: Focusing Enhanced Network for Lane Detection
 
 Pytorch implementation of the paper "FENet: Focusing Enhanced Network for Lane Detection" 
