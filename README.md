@@ -3,7 +3,7 @@
 
 # FENet: Focusing Enhanced Network for Lane Detection
 
-Pytorch implementation of the paper "FENet: Focusing Enhanced Network for Lane Detection" 
+This is the Pytorch implementation for the paper "FENet: Focusing Enhanced Network for Lane Detection" 
 
 The paper is available at [arXiv](https://arxiv.org/abs/2312.17163).
 
