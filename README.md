@@ -1,6 +1,8 @@
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/fenet-focusing-enhanced-network-for-lane/lane-detection-on-llamas)](https://paperswithcode.com/sota/lane-detection-on-llamas?p=fenet-focusing-enhanced-network-for-lane)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/fenet-focusing-enhanced-network-for-lane/lane-detection-on-culane)](https://paperswithcode.com/sota/lane-detection-on-culane?p=fenet-focusing-enhanced-network-for-lane)
 
+This paper has been accepted to ICME 2024.
+
 # FENet: Focusing Enhanced Network for Lane Detection
 
 This is the Pytorch implementation for the paper "FENet: Focusing Enhanced Network for Lane Detection" 
