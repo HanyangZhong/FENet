@@ -7,7 +7,7 @@ This paper has been accepted to ICME 2024.
 
 This is the Pytorch implementation for the paper "FENet: Focusing Enhanced Network for Lane Detection" 
 
-The paper is available at [arXiv](https://arxiv.org/abs/2312.17163).
+The paper is available at [arXiv](https://arxiv.org/abs/2312.17163) and [arXiv](https://ieeexplore.ieee.org/document/10687857).
 
 - FENet: Focusing Enhanced Network for Lane Detection
 - [Introduction](#introduction)
